@@ -1,0 +1,32 @@
+<div class="shadow border p-4">
+  <form
+    [formGroup]="userForm"
+    (ngSubmit)="editUserId ? updateUser() : addUser()"
+  >
+    <mat-form-field class="w-full" color="primary">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field class="w-full" color="primary">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field class="w-full" color="primary">
+      <mat-label>Age</mat-label>
+      <input type="number" matInput formControlName="age" />
+    </mat-form-field>
+    <mat-form-field class="w-full" color="primary">
+      <mat-label>Address</mat-label>
+      <input type="text" matInput formControlName="address" />
+    </mat-form-field>
+    <mat-form-field class="w-full" color="primary">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" />
+    </mat-form-field>
+    <div class="flex justify-center">
+      <button type="submit" mat-raised-button color="primary">
+        {{ editUserId ? "Update" : "Add" }}
+      </button>
+    </div>
+  </form>
+</div>
